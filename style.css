@@ -1,0 +1,230 @@
+/* General Styles */
+body {
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #111, #222);
+  color: #fff;
+}
+
+header {
+  background: #1a1a1a;
+  text-align: center;
+  padding: 2rem 1rem;
+  position: relative; /* Added for z-index */
+  z-index: 10; /* Added to place above music notes */
+}
+
+h1 {
+  color: #ffffff;
+  text-shadow: 0 0 10px #07d400;
+}
+
+.tagline {
+  font-style: italic;
+  color: #07d400;
+}
+
+/* Hero Section */
+#hero {
+  background: linear-gradient(135deg, #07d400, #3a8fff);
+  padding: 3rem 1rem;
+  text-align: center;
+  position: relative; /* Added for z-index */
+  z-index: 10; /* Added to place above music notes */
+}
+
+.btn {
+  padding: 0.8rem 1.5rem;
+  margin: 1rem 0.5rem;
+  background: #fff;
+  color: #000000;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative; /* Added for z-index */
+  z-index: 10; /* Added to place above music notes */
+}
+
+.btn.secondary {
+  background: #07d400;
+  color: #000000;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #fff;
+}
+
+/* Sections */
+section {
+  padding: 2rem 1rem;
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+  position: relative; /* Added for z-index */
+  z-index: 10; /* Added to place above music notes */
+}
+
+.stats-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.stat {
+  background: #333;
+  border-radius: 12px;
+  padding: 1rem;
+  width: 180px;
+  box-shadow: 0 0 10px #00c080;
+  position: relative; /* Added for z-index */
+  z-index: 10; /* Added to place above music notes */
+}
+
+.stat:hover {
+  transform: scale(1.4);
+  box-shadow: 0 0 100px #00c080;
+  z-index: 100; /* talk about how you changed this to fix the underlay issue */
+}
+
+#step-counter {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+#stepsOutput {
+  margin-top: 1rem;
+  background: #111;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #444;
+  position: relative; /* Added for z-index */
+  z-index: 10; /* Added to place above music notes */
+}
+
+.output-box {
+  margin-top: 1rem;
+  background: #222;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px dashed #999;
+}
+
+footer {
+  text-align: center;
+  background: #111;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #aaa;
+  position: relative; /* Added for z-index */
+  z-index: 10; /* Added to place above music notes */
+}
+
+.left-stack,
+.right-stack {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* space between stacked images */
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.left-stack {
+  left: 2vw;
+  gap: 500px;
+}
+
+.right-stack {
+  right: 2vw;
+  gap: 500px;
+}
+
+.left-glow,
+.right-glow {
+  width: 15vw;
+  max-width: 200px;
+}
+
+/* Fixed GIF Corners */
+.gif {
+  position: absolute;
+  width: 15vw;
+  max-width: 180px;
+  z-index: 1000;
+  pointer-events: none;
+  filter: brightness(1.2);
+  box-shadow: 0 0 20px #00c080;
+}
+
+/* Corner positions */
+.top-left {
+  top: 30px;
+  left: 4vw;
+  border-radius: 10%;
+}
+
+.top-right {
+  top: 30px;
+  right: 4vw;
+  border-radius: 10%;
+}
+
+.bottom-left {
+  bottom: 30px;
+  left: 4vw;
+  border-radius: 10%;
+}
+
+.bottom-right {
+  bottom: 30px;
+  right: 4vw;
+  border-radius: 10%;
+}
+
+#music-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1; /* Changed from 9999 to place behind text */
+}
+
+.music-note {
+  position: absolute;
+  font-size: 24px;
+  color: #ff0000;
+  animation: floatUp 30s linear forwards;
+  opacity: 0.8;
+  text-shadow: 0 0 5px #ffffff, 0 0 30px #ffffff;
+  filter: brightness(1.2);
+  z-index: 1; /* Added to ensure notes stay behind text */
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) scale(2);
+    opacity: 0;
+  }
+}
+
+/* hide GIFs on very small screens */
+@media (max-width: 600px) {
+  .gif {
+    display: none;
+  }
+}

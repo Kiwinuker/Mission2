@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dance For Life</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- My Fixed Corner GIFs -->
+    <img
+      src="https://media1.giphy.com/media/FYx64DDl2ElWw/giphy.gif"
+      class="gif top-left"
+      alt="Top Left Dancer"
+    />
+    <img
+      src="https://media1.giphy.com/media/12E2wGCZ0zeqvm/giphy.gif"
+      class="gif top-right"
+      alt="Top Right Dancer"
+    />
+    <img
+      src="https://media3.giphy.com/media/8dLgaP461oses/giphy.gif"
+      class="gif bottom-left"
+      alt="Bottom Left Dancer"
+    />
+    <img
+      src="https://media3.giphy.com/media/L0qTl8hl84EDly62J1/giphy.gif"
+      class="gif bottom-right"
+      alt="Bottom Right Dancer"
+    />
+
+    <script src="script.js" defer></script>
+    <div class="background-overlay"></div>
+    <div class="light-effects"></div>
+
+    <header>
+      <h1>Dance For Life</h1>
+      <p class="tagline">Dance Your Way to Fitness !</p>
+    </header>
+
+    <section id="hero">
+      <div class="hero-content">
+        <h2>Fuel Your Body With Rhythm</h2>
+        <p>Cardio, Strength, and Joy—All in One Dance Session</p>
+        <a href="#about" class="btn">Get Started</a>
+        <button id="motivateBtn" class="btn secondary">Need Motivation?</button>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>Why Dance for Fitness?</h2>
+      <p>
+        Dancing is more than movement—it's a lifestyle. It elevates your heart
+        rate, engages your core, and burns calories while boosting your mood.
+        Whether you're grooving to hip-hop, energizing to EDM, or flowing with
+        salsa, dance makes fitness fun.
+      </p>
+      <p>
+        Scientific studies show that dance-based cardio enhances physical and
+        mental health. And best of all—no equipment needed, just your body and
+        the beat.
+      </p>
+    </section>
+
+    <section id="stats">
+      <h2>Fitness Benefits of Dancing</h2>
+      <div class="stats-container">
+        <div class="stat">
+          <h3>500+</h3>
+          <p>Calories burned per hour</p>
+        </div>
+        <div class="stat">
+          <h3>70%</h3>
+          <p>Boost in heart health with regular dance</p>
+        </div>
+        <div class="stat">
+          <h3>40%</h3>
+          <p>Improvement in muscle tone & flexibility</p>
+        </div>
+        <div class="stat">
+          <h3>90%</h3>
+          <p>Reported feeling happier after dancing</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="get-started">
+      <h2>Start Your Dance Journey</h2>
+      <p>
+        Follow these rhythm-fueled steps to start your fitness transformation:
+      </p>
+      <ol>
+        <li>
+          Pick a genre: Hip-Hop, Rap, Zumba, Pop, EDM, Techno, Trance, Drum and
+          bass, Hardstyle, Rock, Heavy Metal, Latin vibes, Blues or Classical
+        </li>
+        <li>Create a playlist that motivates you to move</li>
+        <li>Find a comfortable, open space to dance</li>
+        <li>Use warm-ups: neck rolls, side bends, and light steps</li>
+        <li>
+          Start slow, then let the beat take control—sweat, smile, repeat!
+        </li>
+      </ol>
+      <p class="cta-note">
+        No gym. No stress. Just movement, music, and a healthier you.
+      </p>
+      <div id="caloriesOutput" class="output-box">
+        Click below to calculate your dance burn!
+      </div>
+      <button id="calculateBtn" class="btn secondary">
+        Calculate Calories
+      </button>
+    </section>
+
+    <section id="step-counter">
+      <h2>Dance Step Counter</h2>
+      <p>Click the button to simulate your dance steps:</p>
+      <button id="countStepsBtn" class="btn secondary">Count Steps</button>
+      <div id="stepsOutput" class="output-box"></div>
+    </section>
+
+    <!--Floating music symbols-->
+    <div id="music-container"></div>
+
+    <footer>
+      <p>Dance For Life by Jax © 2025. Dance Smart. Live Strong.</p>
+    </footer>
+  </body>
+</html>
